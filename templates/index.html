@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block css %}
+<link
+  href="{{ url_for('static', filename='css/style.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %} {% block content %}
+<div class="bg">
+  <div class="form-container">
+    <div class="formwrapper">
+      <h2 class="title">Options Price Calculator</h2>
+      <form method="POST">
+        <div class="form-field">
+          {{ form.option_type.label }} {{ form.option_type }}
+        </div>
+        <div class="form-field">
+          {{ form.stock_price.label }} {{ form.stock_price }}
+        </div>
+        <div class="form-field">
+          {{ form.strike_price.label }} {{ form.strike_price }}
+        </div>
+        <div class="form-field">
+          {{ form.risk_free.label }} {{ form.risk_free }}
+        </div>
+        <div class="form-field">{{ form.vol.label }} {{ form.vol}}</div>
+        <div class="form-field">
+          {{ form.time_expiry.label }} {{ form.time_expiry }}
+        </div>
+        <div class="button-container">
+          {{ form.submit }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

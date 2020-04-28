@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} {% block css %}
+<link
+  href="{{ url_for('static', filename='css/style.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %} {% block content %}
+<div class="bg">
+  <div class="form-container">
+    <div class="formwrapper">
+      <h2 class="title">Options Price Calculator</h2>
+      <form method="POST" action="/">
+        <div class="form-field">
+          {{ form.ticker.label }} {{ form.ticker }}
+        </div>
+        {{ form.submit }}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

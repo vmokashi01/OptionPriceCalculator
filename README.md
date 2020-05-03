@@ -1,6 +1,6 @@
 # OptionPriceCalculator
 
-Flask web app that calculates European option prices based on Black-Scholes binary pricing model. 
+Flask web app that calculates European option prices based on Black-Scholes binary option pricing model. 
 
 The default risk free rate is scraped from the US 10-year Treasury bonds and implied volatilities are scraped from McMillan Analysis Corp. 
 
